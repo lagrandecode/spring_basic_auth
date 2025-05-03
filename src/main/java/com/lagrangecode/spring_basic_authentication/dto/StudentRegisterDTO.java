@@ -1,30 +1,29 @@
 package com.lagrangecode.spring_basic_authentication.dto;
 
 import com.lagrangecode.spring_basic_authentication.Entity.Course;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
-
+import lombok.Data;
 
 @Data
-@Getter
-@Setter
 public class StudentRegisterDTO {
     @NotBlank
     private String firstName;
+    
     @NotBlank
     private String lastName;
+    
     @Email
     private String email;
+    
     @NotBlank
     private String password;
+    
     private Course course;
     private String level;
     private int age;
 
     public StudentRegisterDTO(String firstName, String lastName, String email, String password, Course course, String level, int age) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -37,35 +36,35 @@ public class StudentRegisterDTO {
     public StudentRegisterDTO() {
     }
 
-    public @NotBlank String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(@NotBlank String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public @NotBlank String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(@NotBlank String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public @Email String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(@Email String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public @NotBlank String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(@NotBlank String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

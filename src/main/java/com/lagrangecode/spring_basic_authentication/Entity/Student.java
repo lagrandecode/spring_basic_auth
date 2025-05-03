@@ -1,6 +1,5 @@
 package com.lagrangecode.spring_basic_authentication.Entity;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,14 +15,12 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
     private String firstName;
     private String lastName;
 
@@ -34,6 +31,34 @@ public class Student {
     @Enumerated(EnumType.STRING)
     private Course course;
     private int age;
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public String getEmail() {
         return email;
