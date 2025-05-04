@@ -24,6 +24,7 @@ public class StudentRegisterDTO {
     private int age;
 
     public StudentRegisterDTO(String firstName, String lastName, String email, String password, Course course, String level, int age) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -36,35 +37,35 @@ public class StudentRegisterDTO {
     public StudentRegisterDTO() {
     }
 
-    public String getFirstName() {
+    public @NotBlank String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(@NotBlank String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public @NotBlank String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(@NotBlank String lastName) {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
+    public @Email String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(@Email String email) {
         this.email = email;
     }
 
-    public String getPassword() {
+    public @NotBlank String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(@NotBlank String password) {
         this.password = password;
     }
 
